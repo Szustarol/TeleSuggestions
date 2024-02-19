@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Telecom Suggestions",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+      "default_popup": "default.html",
+      "default_icon": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["content-script.js"],
+            "matches": [
+                "https://*.telecom-paris.fr/*",
+                "http://*.telecom-paris.fr/*"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://*/",
+        "http://*/"
+    ]
+  }
+  
